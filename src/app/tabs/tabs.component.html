@@ -1,0 +1,8 @@
+<ng-container>
+  <ul class="nav nav-tabs">
+    <li role="presentation" (click)="onChoose('all')" [ngClass]="{active: chosenList==='all'}"><a href="#">All</a></li>
+    <li role="presentation" (click)="onChoose('light')" [ngClass]="{active: chosenList==='light'}"><a href="#">Light</a></li>
+    <li role="presentation" (click)="onChoose('dark')" [ngClass]="{active: chosenList==='dark'}"><a href="#">Dark</a></li>
+  </ul>
+  <app-list [characters]="getCharacters()" (sideAssigned)="onSideChosen($event)"></app-list>
+</ng-container>
